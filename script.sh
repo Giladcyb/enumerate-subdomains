@@ -39,7 +39,7 @@ echo "[+] Probing fot HTTP/HTTPS servers with Httprobe..."
 cat subdomains.txt | httprobe | sort | uniq >> httprobe.txt
 
 echo "[+] Taking screenshots with Gowitness..."
-#gowitness file -f httprobe.txt 2> /dev/null
-#sometimes this tool takes some time but you can do "ctrl c or #"
+gowitness file -f httprobe.txt 2> /dev/null
+sometimes this tool takes some time but you can do "ctrl c or #"
 gowitness file -f httprobe.txt > /dev/null 2>&1
 chmod 777 screenshots
