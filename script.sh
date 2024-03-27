@@ -19,7 +19,7 @@ sublist3r -d $url -o sublist3r.txt > /dev/null
 
 
 echo "[+] Enumerating subdomais with Amass..."
-#amass enum -d $url >> Amass.txt 
+amass enum -d $url >> Amass.txt 
 #this tool takes a long time but you can always turn it off with "ctrl c or #"
 touch Amass.txt
 
@@ -40,6 +40,6 @@ cat subdomains.txt | httprobe | sort | uniq >> httprobe.txt
 
 echo "[+] Taking screenshots with Gowitness..."
 gowitness file -f httprobe.txt 2> /dev/null
-sometimes this tool takes some time but you can do "ctrl c or #"
+#sometimes this tool takes some time but you can do "ctrl c or #"
 gowitness file -f httprobe.txt > /dev/null 2>&1
 chmod 777 screenshots
