@@ -1,0 +1,3 @@
+git clone https://github.com/Giladcyb/enumerate-subdomains.git
+cd enumerate-subdomains
+./script.sh https://example_domain.com
